@@ -26,7 +26,6 @@ public class MainActivity extends AppCompatActivity {
         //다른 클래스로 전환하는 코드
         startActivity(intent);
 
-
     }
 
     public void onButton2Clicked(View v) {
