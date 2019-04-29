@@ -8,34 +8,73 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/resButton"
-        android:layout_width="125dp"
-        android:layout_height="59dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:onClick="onButton2Clicked"
-        android:text="식당"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/한식"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/hansik"
+        app:layout_constraintBottom_toTopOf="@+id/분식"
+        app:layout_constraintEnd_toStartOf="@+id/중식"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/cafeButton"
-        android:layout_width="125dp"
-        android:layout_height="59dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:onClick="onButton1Clicked"
-        android:text="카페"
+        android:id="@+id/중식"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/jungsik"
+        app:layout_constraintBottom_toTopOf="@+id/양식"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/한식"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/일식"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginBottom="1dp"
+        android:background="@drawable/ilsik"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/카페"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/분식" />
+
+    <Button
+        android:id="@+id/카페"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="1dp"
+        android:background="@drawable/cafe"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/일식"
+        app:layout_constraintTop_toBottomOf="@+id/양식" />
+
+    <Button
+        android:id="@+id/분식"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:background="@drawable/bunsik"
+        app:layout_constraintBottom_toTopOf="@+id/일식"
+        app:layout_constraintEnd_toStartOf="@+id/양식"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.269" />
+        app:layout_constraintTop_toBottomOf="@+id/한식" />
+
+    <Button
+        android:id="@+id/양식"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/yangsik"
+        app:layout_constraintBottom_toTopOf="@+id/카페"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/분식"
+        app:layout_constraintTop_toBottomOf="@+id/중식" />
 
 </android.support.constraint.ConstraintLayout>
